@@ -1,0 +1,61 @@
+networks:
+  notebook:
+    name: notebook
+    driver: bridge
+
+volumes:
+  mysql_data:
+    name: mysql_data
+  redis_data:
+    name: redis_data
+
+services:
+  mysql:
+    image: mysql:8.0.36-debian
+    container_name: blog-mysql
+    hostname: mysql
+    environment:
+      - MYSQL_DATABASE=notebook
+      - MYSQL_ROOT_PASSWORD=数据库密码
+    networks:
+      - notebook
+    ports:
+      - 13306:3306
+    volumes:
+      - mysql_data:/var/lib/mysql
+    restart: always
+
+  redis:
+    image: redis:alpine
+    container_name: blog-redis
+    hostname: redis
+    networks:
+      - notebook
+    ports:
+      - 16379:6379
+    volumes:
+      - redis_data:/data
+    restart: always
+
+  backend:
+    build: ./backend
+    container_name: notebook-backend
+    hostname: backend
+    networks:
+      - notebook
+    depends_on:
+      - mysql
+      - redis
+    restart: always
+    cmd: --spring.datasource.password=数据库密码 --spring.mail.username=邮箱账号 --spring.mail.password=邮箱密钥/密码
+
+  frontend:
+    build: ./frontend
+    container_name: note-frontend
+    hostname: frontend
+    networks:
+      - blog
+    ports:
+      - 10088:80
+    restart: always
+

@@ -1,0 +1,48 @@
+server:
+  port: 8080
+  tomcat:
+    max-http-form-post-size: 30MB
+spring:
+  application:
+    name: blog-server
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: xxxx
+    url: jdbc:mysql://mysql:3306/notebook?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true&rewriteBatchedStatements=true&autoReconnect=true
+  #
+  #    user:
+  #      name: admin
+  #      password: test123
+
+  data:
+    redis:
+      host: redis
+      password: xxx
+      database: 0
+      port: 6379
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 30MB
+      max-request-size: 30MB
+  mvc:
+    static-path-pattern: /img/**
+  web:
+    resources:
+      static-locations: file:/upload
+  mail:
+    properties:
+      mail.smtp.timeout: 3000
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+      mail.smtp.starttls.required: true
+    default-encoding: UTF-8
+    host: smtp.qq.com
+    test-connection: false
+    protocol: smtp
+    username: xxx
+    password: xxx
+#mybatis-plus
+mybatis-plus:
+  mapper-locations: classpath:mapping/*.xml

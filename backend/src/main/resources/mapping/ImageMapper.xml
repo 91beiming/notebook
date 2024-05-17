@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.beiming.notebook.dao.mapper.ImageMapper">
+  <resultMap id="BaseResultMap" type="com.beiming.notebook.domain.Image">
+    <!--@mbg.generated-->
+    <!--@Table image-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="md5" jdbcType="CHAR" property="md5" />
+    <result column="origin_filename" jdbcType="VARCHAR" property="originFilename" />
+    <result column="path" jdbcType="VARCHAR" property="path" />
+    <result column="size" jdbcType="BIGINT" property="size" />
+    <result column="thumb_path" jdbcType="VARCHAR" property="thumbPath" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, create_time, md5, origin_filename, `path`, `size`, thumb_path, update_time
+  </sql>
+</mapper>
