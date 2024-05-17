@@ -10,10 +10,6 @@ spring:
     username: root
     password: xxxx
     url: jdbc:mysql://mysql:3306/notebook?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true&rewriteBatchedStatements=true&autoReconnect=true
-  #
-  #    user:
-  #      name: admin
-  #      password: test123
 
   data:
     redis:

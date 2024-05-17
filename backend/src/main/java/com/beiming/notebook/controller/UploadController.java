@@ -1,10 +1,13 @@
 package com.beiming.notebook.controller;
 
+import com.beiming.notebook.common.exception.CustomerException;
 import com.beiming.notebook.domain.ImageDTO;
 import com.beiming.notebook.service.ImageService;
 import com.beiming.notebook.service.UploadService;
 import jakarta.annotation.Resource;
+import org.springframework.http.MediaTypeFactory;
 import org.springframework.util.DigestUtils;
+import org.springframework.util.MimeType;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,9 +28,26 @@ public class UploadController {
     @Resource
     private ImageService imageService;
 
+    /**
+     * 上传文件
+     *
+     * @param file
+     * @return
+     * @throws IOException
+     */
     @PostMapping("img")
     public ImageDTO uploadImg(MultipartFile file) throws IOException {
+        //检测文件类型
+        Boolean isImg = MediaTypeFactory.getMediaType(file.getOriginalFilename())
+                .map(MimeType::getType)
+                .map("image"::equals)
+                .orElse(false);
+        if (!isImg) {
+            throw new CustomerException("文件类型不符合");
+        }
 
+
+        //先查询文件库中有无当前文件
         ImageDTO imageDTO = imageService.getImage(file);
         if (null != imageDTO) {
             return imageDTO;

@@ -34,6 +34,12 @@ public class UploadServiceImpl implements UploadService {
         return subDirStr + "/" + filename;
     }
 
+    /**
+     * 生成文件的缩略图
+     * @param file
+     * @return
+     * @throws IOException
+     */
     @Override
     public String uploadThumb(MultipartFile file) throws IOException {
         String subDirStr = "/" + LocalDateTime.now().format(dateTimeFormatter);
