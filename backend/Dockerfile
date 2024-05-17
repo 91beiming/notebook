@@ -4,7 +4,7 @@ COPY ./ ./
 RUN mvn clean -U package -Dmaven.test.skip=true
 
 
-FROM openjdk:21-ea-jdk-slim AS prod-stage
+FROM openjdk:21-jdk-slim AS prod-stage
 WORKDIR /app
 COPY --from=build-stage /app/target/backend.jar /app/backend.jar
 EXPOSE 8080
