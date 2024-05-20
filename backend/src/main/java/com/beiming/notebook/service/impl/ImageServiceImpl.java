@@ -1,6 +1,6 @@
 package com.beiming.notebook.service.impl;
 
-import com.beiming.notebook.dao.impl.ImageDAO;
+import com.beiming.notebook.dao.ImageDAO;
 import com.beiming.notebook.dao.model.Image;
 import com.beiming.notebook.service.model.ImageDTO;
 import com.beiming.notebook.service.ImageService;

@@ -27,11 +27,10 @@ public class R<T> {
     }
 
     public R(Integer code, String message, T data) {
+        this();
         this.code = code;
         this.message = message;
         this.data = data;
-        this.responseId = MDC.get(Constant.TRACE_ID_KEY);
-
     }
 
     public static <T> R<T> ok(T data) {

@@ -4,7 +4,7 @@ import com.beiming.notebook.common.constant.LuaScripts;
 import com.beiming.notebook.common.constant.RedisKey;
 import com.beiming.notebook.common.constant.UserRedisConstant;
 import com.beiming.notebook.common.utils.JsonUtils;
-import com.beiming.notebook.dao.impl.UserDAO;
+import com.beiming.notebook.dao.UserDAO;
 import com.beiming.notebook.dao.model.User;
 import com.beiming.notebook.service.model.UserDTO;
 import com.beiming.notebook.dao.model.UserLogin;

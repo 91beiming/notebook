@@ -1,4 +1,4 @@
-package com.beiming.notebook.dao.impl;
+package com.beiming.notebook.dao;
 
 import com.beiming.notebook.dao.mapper.UserMapper;
 import com.beiming.notebook.dao.model.User;

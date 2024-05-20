@@ -1,4 +1,4 @@
-package com.beiming.notebook.dao.impl;
+package com.beiming.notebook.dao;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.beiming.notebook.dao.mapper.UserLoginMapper;
