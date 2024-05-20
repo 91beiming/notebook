@@ -5,12 +5,13 @@
     <!--@mbg.generated-->
     <!--@Table photo-->
     <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="album_id" jdbcType="BIGINT" property="albumId" />
     <result column="path" jdbcType="VARCHAR" property="path" />
     <result column="thumb_path" jdbcType="VARCHAR" property="thumbPath" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->
-    id, `path`, thumb_path, create_time
+    id, album_id, `path`, thumb_path, create_time
   </sql>
 </mapper>

@@ -18,7 +18,7 @@ import java.util.List;
  * PhotoAlbumController
  */
 @RestController
-@RequestMapping("photo/album")
+@RequestMapping("photo_album")
 public class PhotoAlbumController {
 
     @Resource
@@ -67,4 +67,23 @@ public class PhotoAlbumController {
     public List<PhotoAlbumDTO> list() {
         return photoAlbumService.list();
     }
+
+    /**
+     * 给相册添加相片
+     */
+    @PostMapping("photo/add")
+    public Boolean addPhoto(@RequestBody @Validated(PhotoAlbumParams.addPhoto.class) PhotoAlbumParams params) {
+        photoAlbumService.addPhoto(params.getId(), params.getPath(), params.getThumbPath());
+        return true;
+    }
+
+    /**
+     * 从相册中删除图片
+     */
+    @PostMapping("photo/deleteById")
+    public Boolean deletePhotoById(@RequestBody @Validated(PhotoAlbumParams.deletePhotoById.class) PhotoAlbumParams params) {
+        photoAlbumService.deletePhotoById(params.getId());
+        return true;
+    }
 }
+

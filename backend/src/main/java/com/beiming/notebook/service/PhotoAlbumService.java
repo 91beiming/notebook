@@ -18,4 +18,8 @@ public interface PhotoAlbumService {
     void deleteById(Long id);
 
     List<PhotoAlbumDTO> list();
+
+    void addPhoto(Long id, String path, String thumbPath);
+
+    void deletePhotoById(Long id);
 }

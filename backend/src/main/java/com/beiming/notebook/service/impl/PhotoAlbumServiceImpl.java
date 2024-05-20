@@ -43,4 +43,14 @@ public class PhotoAlbumServiceImpl implements PhotoAlbumService {
         List<PhotoAlbum> list = photoAlbumDAO.list();
         return BeanCopyUtils.copyList(list, PhotoAlbumDTO.class);
     }
+
+    @Override
+    public void addPhoto(Long id, String path, String thumbPath) {
+        photoAlbumDAO.addPhoto(id, path, thumbPath);
+    }
+
+    @Override
+    public void deletePhotoById(Long id) {
+        photoAlbumDAO.deletePhotoById(id);
+    }
 }

@@ -20,6 +20,12 @@ public class Photo extends BaseObject {
     private Long id;
 
     /**
+     * 相册Id
+     */
+    @TableField(value = "album_id")
+    private Long albumId;
+
+    /**
      * 图片地址
      */
     @TableField(value = "`path`")
