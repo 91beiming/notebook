@@ -60,14 +60,14 @@ public class LoginController {
     }
 
     @PostMapping("/wx/callback")
-    public YiDengResponse<?> wxCallback(@RequestBody String params) {
-        log.info("LoginController.wxCallback: 微信授权回调接口 {}", params);
-        WxUserInfo wxUserInfo = JsonUtils.toObject(params, WxUserInfo.class);
+    public YiDengResponse<?> wxCallback(@RequestBody WxUserInfo wxUserInfo) {
+        log.info("LoginController.wxCallback: 微信授权回调接口 {}", wxUserInfo);
         WxUserInfo.UserInfo userInfo = wxUserInfo.getWxMaUserInfo();
         log.info("LoginController.wxCallback: 获取wx用户信息 {}", userInfo);
         YiDengResponse<?> r = new YiDengResponse<>();
         r.setCode(0);
-        r.setMsg("登录成功");
+        r.setMsg("登录成功，登陆人: " + userInfo.getNickName());
+        r.setResponseId(null);
         return r;
     }
 }
