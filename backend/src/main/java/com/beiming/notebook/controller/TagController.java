@@ -1,9 +1,9 @@
 package com.beiming.notebook.controller;
 
-import com.beiming.notebook.service.TagService;
-import com.beiming.notebook.dao.model.Tag;
-import com.beiming.notebook.service.model.TagDTO;
 import com.beiming.notebook.controller.model.TagParams;
+import com.beiming.notebook.dao.model.Tag;
+import com.beiming.notebook.service.TagService;
+import com.beiming.notebook.service.model.TagDTO;
 import jakarta.annotation.Resource;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -61,5 +61,13 @@ public class TagController {
     @GetMapping("likeByName")
     public List<TagDTO> likeByName(TagParams params) {
         return tagService.likeByName(params);
+    }
+
+    /**
+     * 树形标签
+     */
+    @GetMapping("tagTree")
+    public List<TagDTO> tagTree() {
+        return tagService.tagTree();
     }
 }

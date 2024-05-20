@@ -36,4 +36,8 @@ public class TagDAO {
                         .like(StringUtils.isNotBlank(name), Tag::getName, name)
         );
     }
+
+    public List<Tag> list() {
+        return tagMapper.selectList(null);
+    }
 }
