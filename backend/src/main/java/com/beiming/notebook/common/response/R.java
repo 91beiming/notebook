@@ -33,6 +33,18 @@ public class R<T> {
         this.data = data;
     }
 
+    /**
+     * 只展示最多30个字的错误信息
+     *
+     * @return
+     */
+    public String getMessage() {
+        if (message.length() > 30) {
+            return message.substring(0, 30);
+        }
+        return message;
+    }
+
     public static <T> R<T> ok(T data) {
         return new R<>(HttpStatus.OK.value(), "success", data);
     }
