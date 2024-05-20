@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 /**
  * TagParams
@@ -25,6 +26,8 @@ public class TagDTO extends BaseObject {
      * 备注
      */
     private String remark;
+
+    private List<TagDTO> children;
 
     private LocalDateTime createTime;
 

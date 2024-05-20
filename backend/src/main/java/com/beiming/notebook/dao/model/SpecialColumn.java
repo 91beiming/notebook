@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.beiming.notebook.common.entity.BaseObject;
 import java.time.LocalDateTime;
 import lombok.Getter;
 import lombok.Setter;
@@ -11,13 +12,14 @@ import lombok.Setter;
 /**
  * SpecialColumn
  */
+
 /**
  * 专栏
  */
 @Getter
 @Setter
 @TableName(value = "special_column")
-public class SpecialColumn {
+public class SpecialColumn extends BaseObject {
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 

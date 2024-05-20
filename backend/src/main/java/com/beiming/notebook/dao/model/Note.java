@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.beiming.notebook.common.entity.BaseObject;
 import java.time.LocalDateTime;
 import lombok.Getter;
 import lombok.Setter;
@@ -11,13 +12,14 @@ import lombok.Setter;
 /**
  * Note
  */
+
 /**
  * 笔记表
  */
 @Getter
 @Setter
 @TableName(value = "note")
-public class Note {
+public class Note extends BaseObject {
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
