@@ -5,9 +5,9 @@ import com.beiming.notebook.common.constant.RedisKey;
 import com.beiming.notebook.common.constant.UserRedisConstant;
 import com.beiming.notebook.common.utils.JsonUtils;
 import com.beiming.notebook.dao.UserDAO;
-import com.beiming.notebook.domain.User;
-import com.beiming.notebook.domain.UserDTO;
-import com.beiming.notebook.domain.UserLogin;
+import com.beiming.notebook.dao.model.User;
+import com.beiming.notebook.service.model.UserDTO;
+import com.beiming.notebook.dao.model.UserLogin;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.StringRedisTemplate;
 

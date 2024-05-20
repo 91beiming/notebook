@@ -1,4 +1,4 @@
-package com.beiming.notebook.domain;
+package com.beiming.notebook.service.model;
 
 import com.beiming.notebook.common.entity.BaseObject;
 import lombok.Getter;

@@ -1,7 +1,7 @@
 package com.beiming.notebook.controller;
 
 import com.beiming.notebook.common.utils.RequestUtils;
-import com.beiming.notebook.domain.UserDTO;
+import com.beiming.notebook.service.model.UserDTO;
 import com.beiming.notebook.service.LogoutService;
 import jakarta.annotation.Resource;
 import org.springframework.web.bind.annotation.GetMapping;

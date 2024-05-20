@@ -9,7 +9,7 @@ import com.beiming.notebook.common.constant.UserRedisConstant;
 import com.beiming.notebook.common.exception.NotLoginException;
 import com.beiming.notebook.common.response.R;
 import com.beiming.notebook.common.utils.JsonUtils;
-import com.beiming.notebook.domain.UserDTO;
+import com.beiming.notebook.service.model.UserDTO;
 import jakarta.annotation.Resource;
 import jakarta.servlet.Filter;
 import jakarta.servlet.FilterChain;

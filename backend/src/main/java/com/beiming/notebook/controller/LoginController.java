@@ -1,15 +1,14 @@
 package com.beiming.notebook.controller;
 
 import com.beiming.notebook.common.utils.JsonUtils;
-import com.beiming.notebook.domain.UserDTO;
-import com.beiming.notebook.domain.WxUserInfo;
-import com.beiming.notebook.domain.YiDengResponse;
+import com.beiming.notebook.controller.model.LoginParams;
 import com.beiming.notebook.service.LoginService;
 import com.beiming.notebook.service.impl.LoginFactory;
+import com.beiming.notebook.service.model.UserDTO;
+import com.beiming.notebook.service.model.WxUserInfo;
+import com.beiming.notebook.service.model.YiDengResponse;
 import com.fasterxml.jackson.core.type.TypeReference;
 import jakarta.annotation.Resource;
-import lombok.Getter;
-import lombok.Setter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.web.client.RestTemplateBuilder;
@@ -44,13 +43,6 @@ public class LoginController {
         return loginService.login(params.getKey(), params.getSecret());
     }
 
-
-    @Getter
-    @Setter
-    public static class LoginParams {
-        private String key;
-        private String secret;
-    }
 
     /**
      * 微信登陆,获取二维码

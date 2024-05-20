@@ -3,7 +3,7 @@ package com.beiming.notebook.dao.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.beiming.notebook.dao.ImageDAO;
 import com.beiming.notebook.dao.mapper.ImageMapper;
-import com.beiming.notebook.domain.Image;
+import com.beiming.notebook.dao.model.Image;
 import jakarta.annotation.Resource;
 import org.springframework.stereotype.Repository;
 

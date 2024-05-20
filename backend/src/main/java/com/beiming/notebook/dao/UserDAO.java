@@ -1,6 +1,6 @@
 package com.beiming.notebook.dao;
 
-import com.beiming.notebook.domain.User;
+import com.beiming.notebook.dao.model.User;
 
 /**
  * UserDAO

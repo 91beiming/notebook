@@ -3,7 +3,7 @@ package com.beiming.notebook.common.utils;
 import com.beiming.notebook.common.constant.HttpAttributeKey;
 import com.beiming.notebook.common.exception.CustomerException;
 import com.beiming.notebook.common.exception.NotLoginException;
-import com.beiming.notebook.domain.UserDTO;
+import com.beiming.notebook.service.model.UserDTO;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;

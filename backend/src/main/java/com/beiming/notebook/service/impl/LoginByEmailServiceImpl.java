@@ -3,7 +3,7 @@ package com.beiming.notebook.service.impl;
 import com.beiming.notebook.common.exception.CustomerException;
 import com.beiming.notebook.dao.UserDAO;
 import com.beiming.notebook.dao.UserLoginDAO;
-import com.beiming.notebook.domain.UserLogin;
+import com.beiming.notebook.dao.model.UserLogin;
 import com.beiming.notebook.service.LoginService;
 import jakarta.annotation.Resource;
 import org.springframework.data.redis.core.StringRedisTemplate;

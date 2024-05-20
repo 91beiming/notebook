@@ -1,7 +1,7 @@
 package com.beiming.notebook.dao.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.beiming.notebook.domain.UserLogin;
+import com.beiming.notebook.dao.model.UserLogin;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

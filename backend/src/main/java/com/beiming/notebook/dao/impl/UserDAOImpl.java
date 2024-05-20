@@ -2,7 +2,7 @@ package com.beiming.notebook.dao.impl;
 
 import com.beiming.notebook.dao.UserDAO;
 import com.beiming.notebook.dao.mapper.UserMapper;
-import com.beiming.notebook.domain.User;
+import com.beiming.notebook.dao.model.User;
 import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
 

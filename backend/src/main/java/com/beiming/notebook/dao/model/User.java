@@ -1,4 +1,4 @@
-package com.beiming.notebook.domain;
+package com.beiming.notebook.dao.model;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;

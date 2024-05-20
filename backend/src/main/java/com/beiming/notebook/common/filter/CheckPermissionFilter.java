@@ -5,7 +5,7 @@ import com.beiming.notebook.common.constant.Is;
 import com.beiming.notebook.common.exception.NotPermissionException;
 import com.beiming.notebook.common.response.R;
 import com.beiming.notebook.common.utils.JsonUtils;
-import com.beiming.notebook.domain.UserDTO;
+import com.beiming.notebook.service.model.UserDTO;
 import jakarta.servlet.Filter;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.FilterConfig;

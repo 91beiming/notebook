@@ -1,6 +1,6 @@
 package com.beiming.notebook.controller;
 
-import com.beiming.notebook.domain.ImageDTO;
+import com.beiming.notebook.service.model.ImageDTO;
 import com.beiming.notebook.service.ImageService;
 import com.beiming.notebook.service.UploadService;
 import jakarta.annotation.Resource;

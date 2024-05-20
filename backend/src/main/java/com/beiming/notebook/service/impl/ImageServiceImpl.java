@@ -1,8 +1,8 @@
 package com.beiming.notebook.service.impl;
 
 import com.beiming.notebook.dao.ImageDAO;
-import com.beiming.notebook.domain.Image;
-import com.beiming.notebook.domain.ImageDTO;
+import com.beiming.notebook.dao.model.Image;
+import com.beiming.notebook.service.model.ImageDTO;
 import com.beiming.notebook.service.ImageService;
 import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
