@@ -11,7 +11,7 @@ volumes:
 
 services:
   mysql:
-    image: mysql:8.0.36-debian
+    image: mysql:8.4.0-oracle
     container_name: blog-mysql
     hostname: mysql
     environment:
@@ -26,7 +26,7 @@ services:
     restart: always
 
   redis:
-    image: redis:alpine
+    image: redis:alpine3.19
     container_name: blog-redis
     hostname: redis
     networks:

@@ -23,11 +23,11 @@
 
 ```shell
 docker pull maven:3.9.6-eclipse-temurin-21-alpine
-docker pull openjdk:21-ea-jdk-slim
-docker pull node:lts-alpine3.19
-docker pull nginx:stable-alpine
-docker pull mysql:8.0.36-debian
-docker pull redis:alpine
+docker pull eclipse-temurin:21-jdk-alpine
+docker pull node:20.13.0-slim
+docker pull nginx:alpine3.19
+docker pull mysql:8.4.0-oracle
+docker pull redis:alpine3.19
 docker-compose up -d
 ```
 

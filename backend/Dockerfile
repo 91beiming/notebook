@@ -4,7 +4,7 @@ COPY ./ ./
 RUN mvn clean -U package -Dmaven.test.skip=true
 
 
-FROM openjdk:21-ea-jdk-slim AS prod-stage
+FROM eclipse-temurin:21-jdk-alpine AS prod-stage
 WORKDIR /app
 COPY --from=build-stage /app/target/server.jar /app/server.jar
 EXPOSE 8080
