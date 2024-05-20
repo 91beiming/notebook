@@ -1,8 +1,9 @@
-package com.beiming.notebook.module.tag;
+package com.beiming.notebook.controller;
 
-import com.beiming.notebook.module.tag.model.Tag;
-import com.beiming.notebook.module.tag.model.TagDTO;
-import com.beiming.notebook.module.tag.model.TagParams;
+import com.beiming.notebook.service.TagService;
+import com.beiming.notebook.dao.model.Tag;
+import com.beiming.notebook.service.model.TagDTO;
+import com.beiming.notebook.controller.model.TagParams;
 import jakarta.annotation.Resource;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;

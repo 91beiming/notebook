@@ -1,7 +1,7 @@
-package com.beiming.notebook.module.tag;
+package com.beiming.notebook.dao.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.beiming.notebook.module.tag.model.Tag;
+import com.beiming.notebook.dao.model.Tag;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

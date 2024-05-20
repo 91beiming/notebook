@@ -1,7 +1,6 @@
-package com.beiming.notebook.module.tag.model;
+package com.beiming.notebook.service.model;
 
 import com.beiming.notebook.common.entity.BaseObject;
-import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,8 +11,7 @@ import java.time.LocalDateTime;
  */
 @Setter
 @Getter
-public class TagParams extends BaseObject {
-    @NotNull(message = "id不能为空", groups = {updateTag.class, deleteById.class})
+public class TagDTO extends BaseObject {
     private Long id;
 
     private Long pid;
@@ -31,10 +29,4 @@ public class TagParams extends BaseObject {
     private LocalDateTime createTime;
 
     private LocalDateTime updateTime;
-
-    public interface updateTag {
-    }
-
-    public interface deleteById {
-    }
 }

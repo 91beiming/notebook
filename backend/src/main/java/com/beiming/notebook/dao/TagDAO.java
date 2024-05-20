@@ -1,7 +1,8 @@
-package com.beiming.notebook.module.tag;
+package com.beiming.notebook.dao;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.beiming.notebook.module.tag.model.Tag;
+import com.beiming.notebook.dao.mapper.TagMapper;
+import com.beiming.notebook.dao.model.Tag;
 import jakarta.annotation.Resource;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Repository;

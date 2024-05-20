@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.beiming.notebook.module.tag.TagMapper">
-  <resultMap id="BaseResultMap" type="com.beiming.notebook.module.tag.model.Tag">
+<mapper namespace="com.beiming.notebook.dao.mapper.TagMapper">
+  <resultMap id="BaseResultMap" type="com.beiming.notebook.dao.model.Tag">
     <!--@mbg.generated-->
     <!--@Table tag-->
     <id column="id" jdbcType="BIGINT" property="id" />

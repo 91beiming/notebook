@@ -1,19 +1,21 @@
-package com.beiming.notebook.module.tag;
+package com.beiming.notebook.service.impl;
 
 import com.beiming.notebook.common.utils.BeanCopyUtils;
-import com.beiming.notebook.module.tag.model.Tag;
-import com.beiming.notebook.module.tag.model.TagDTO;
-import com.beiming.notebook.module.tag.model.TagParams;
+import com.beiming.notebook.controller.model.TagParams;
+import com.beiming.notebook.dao.TagDAO;
+import com.beiming.notebook.dao.model.Tag;
+import com.beiming.notebook.service.TagService;
+import com.beiming.notebook.service.model.TagDTO;
 import jakarta.annotation.Resource;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 /**
- * TagService
+ * TagServiceImpl
  */
-@Repository
-public class TagService {
+@Service
+public class TagServiceImpl implements TagService {
 
     @Resource
     private TagDAO tagDAO;
