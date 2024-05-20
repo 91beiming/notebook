@@ -1,6 +1,7 @@
 package com.beiming.notebook.dao;
 
 import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
+import com.beiming.notebook.common.constant.Is;
 import com.beiming.notebook.dao.mapper.PhotoAlbumMapper;
 import com.beiming.notebook.dao.model.PhotoAlbum;
 import jakarta.annotation.Resource;
@@ -18,6 +19,7 @@ public class PhotoAlbumDAO {
     private PhotoAlbumMapper photoAlbumMapper;
 
     public void add(PhotoAlbum photoAlbum) {
+        photoAlbum.setIsPublice(Is.NO);
         photoAlbumMapper.insert(photoAlbum);
     }
 

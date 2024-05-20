@@ -27,6 +27,7 @@ public class PhotoAlbumController {
     /**
      * 创建相册
      */
+    @PostMapping("add")
     public Boolean add(@RequestBody PhotoAlbumParams params) {
         photoAlbumService.add(params.clone(PhotoAlbum.class));
         return true;
