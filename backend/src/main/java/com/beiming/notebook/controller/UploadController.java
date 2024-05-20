@@ -29,7 +29,7 @@ public class UploadController {
     private ImageService imageService;
 
     /**
-     * 上传文件
+     * 上传图片
      *
      * @param file
      * @return

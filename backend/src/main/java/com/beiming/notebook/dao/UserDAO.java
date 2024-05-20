@@ -2,6 +2,7 @@ package com.beiming.notebook.dao;
 
 import com.beiming.notebook.dao.mapper.UserMapper;
 import com.beiming.notebook.dao.model.User;
+import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
 
 /**
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserDAO {
 
+    @Resource
     private UserMapper userMapper;
 
 

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.beiming.notebook.dao.mapper.PhotoAlbumMapper">
+    <resultMap id="BaseResultMap" type="com.beiming.notebook.dao.model.PhotoAlbum">
+        <!--@mbg.generated-->
+        <!--@Table photo_album-->
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="remark" jdbcType="VARCHAR" property="remark"/>
+        <result column="is_publice" jdbcType="INTEGER" property="isPublice"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        id,
+        `name`,
+        remark,
+        is_publice,
+        create_time,
+        update_time
+    </sql>
+
+    <update id="togglePublic">
+        update photo_album
+        set is_publice = if(is_publice = 1, 0, 1)
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+</mapper>
