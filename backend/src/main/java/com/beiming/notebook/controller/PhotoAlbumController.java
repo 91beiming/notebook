@@ -18,7 +18,7 @@ import java.util.List;
  * PhotoAlbumController
  */
 @RestController
-@RequestMapping("photo_album")
+@RequestMapping("photoAlbum")
 public class PhotoAlbumController {
 
     @Resource

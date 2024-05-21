@@ -28,10 +28,7 @@ public class TagParams extends BaseObject {
      */
     private String remark;
 
-    private LocalDateTime createTime;
-
-    private LocalDateTime updateTime;
-
+m
     public interface updateTag {
     }
 
