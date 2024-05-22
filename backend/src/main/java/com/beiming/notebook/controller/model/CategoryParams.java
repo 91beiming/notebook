@@ -31,5 +31,6 @@ public class CategoryParams extends BaseObject {
     public interface updateById {
     }
 
-    public interface deleteById{}
+    public interface deleteById {
+    }
 }
