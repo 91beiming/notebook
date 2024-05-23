@@ -2,6 +2,7 @@ package com.beiming.notebook.common.exception;
 
 import com.beiming.notebook.common.response.R;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.validation.BindException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
@@ -23,6 +24,10 @@ public class GlobalExceptionHandler {
             }
             case CustomerException exception -> {
                 log.error(exception.getMessage(), exception);
+                return R.error(exception);
+            }
+            case BindException exception -> {
+                log.error("参数校验失败", exception);
                 return R.error(exception);
             }
             case null, default -> {

@@ -9,6 +9,11 @@ import lombok.Getter;
 import lombok.Setter;
 import org.slf4j.MDC;
 import org.springframework.http.HttpStatus;
+import org.springframework.validation.BindException;
+import org.springframework.validation.ObjectError;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Setter
@@ -63,5 +68,13 @@ public class R<T> {
 
     public static R<?> error(NotPermissionException e) {
         return new R<>(403, e.getMessage(), null);
+    }
+
+    public static R<?> error(BindException e) {
+        List<String> msgList = new ArrayList<>();
+        for (ObjectError objectError : e.getAllErrors()) {
+            msgList.add(objectError.getDefaultMessage());
+        }
+        return new R<>(502, msgList.toString(), null);
     }
 }
