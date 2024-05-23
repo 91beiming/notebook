@@ -14,6 +14,7 @@ import com.beiming.notebook.service.model.TagDTO;
 import jakarta.annotation.Resource;
 import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -34,6 +35,7 @@ public class NoteServiceImpl implements NoteService {
 
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public void addNote(NoteParams params) {
         Long noteId = noteDAO.add(params.clone(Note.class));
         if (ObjectUtils.isNotEmpty(params.getTagIdList())) {
@@ -61,6 +63,7 @@ public class NoteServiceImpl implements NoteService {
         return noteDTOIPage;
     }
 
+    @Transactional(rollbackFor = Exception.class)
     @Override
     public void linkTag(Long id, List<Long> tagIdList) {
         noteDAO.linkTag(id, tagIdList);
