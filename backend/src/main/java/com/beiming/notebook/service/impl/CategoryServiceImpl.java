@@ -38,4 +38,13 @@ public class CategoryServiceImpl implements CategoryService {
         List<Category> list = categoryDAO.likeByName(name);
         return BeanCopyUtils.copyList(list, CategoryDTO.class);
     }
+
+    @Override
+    public CategoryDTO getById(Long categoryId) {
+        Category category = categoryDAO.getById(categoryId);
+        if (category != null) {
+            return category.clone(CategoryDTO.class);
+        }
+        return null;
+    }
 }

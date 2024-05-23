@@ -62,4 +62,10 @@ public class TagServiceImpl implements TagService {
         }
         return rootList;
     }
+
+    @Override
+    public List<TagDTO> getByNoteId(Long noteId) {
+        List<Tag> tagList = tagDAO.getByNoteId(noteId);
+        return BeanCopyUtils.copyList(tagList, TagDTO.class);
+    }
 }

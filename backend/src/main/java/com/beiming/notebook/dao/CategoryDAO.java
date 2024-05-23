@@ -36,4 +36,8 @@ public class CategoryDAO {
                         .like(StringUtils.isNotBlank(name), Category::getName, name)
         );
     }
+
+    public Category getById(Long categoryId) {
+        return categoryMapper.selectById(categoryId);
+    }
 }

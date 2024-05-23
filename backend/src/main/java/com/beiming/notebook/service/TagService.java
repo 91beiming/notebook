@@ -20,4 +20,6 @@ public interface TagService {
     List<TagDTO> likeByName(TagParams params);
 
     List<TagDTO> tagTree();
+
+    List<TagDTO> getByNoteId(Long noteId);
 }

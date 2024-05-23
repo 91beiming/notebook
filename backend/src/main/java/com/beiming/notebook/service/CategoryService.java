@@ -17,4 +17,6 @@ public interface CategoryService {
     void deleteById(Long id);
 
     List<CategoryDTO> likeByName(String name);
+
+    CategoryDTO getById(Long categoryId);
 }

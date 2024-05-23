@@ -27,6 +27,12 @@ public class Note extends BaseObject {
     private Long userId;
 
     /**
+     * 分类ID
+     */
+    @TableField(value = "category_id")
+    private Long categoryId;
+
+    /**
      * 专栏ID
      */
     @TableField(value = "special_column_id")
@@ -49,6 +55,12 @@ public class Note extends BaseObject {
      */
     @TableField(value = "is_public")
     private Integer isPublic;
+
+    /**
+     * 逻辑删除
+     */
+    @TableField(value = "is_deleted")
+    private Integer isDeleted;
 
     @TableField(value = "create_time")
     private LocalDateTime createTime;
